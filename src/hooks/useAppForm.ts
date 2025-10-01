@@ -9,11 +9,7 @@ export function useAppForm<T extends z.ZodType>(
   }
 ) {
   const form = useForm({
-    defaultValues: options?.defaultValues || {
-      address: "",
-      phones: [],
-      name: "",
-    },
+    defaultValues: options?.defaultValues || {},
     validators: {
       onChange: schema,
     },
